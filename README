@@ -140,6 +140,9 @@ stkalign
 systick
     Uses the Cortex NVIC system tick timer to flash the LED.
 
+timer -
+    ...
+
 uart_repeat_write
     Tests the UART write functionality.  Continues to write the word "Hello"
     to the UART.  This example uses polling.
