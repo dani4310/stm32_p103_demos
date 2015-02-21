@@ -95,9 +95,9 @@ void init_timer(void) {
 
     /* Time base configuration */
     TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
-    TIM_TimeBaseStructure.TIM_Period = 65535;
-    uint16_t prescaler_value = (uint16_t) (36000000 / 65535 / 1);
-    TIM_TimeBaseStructure.TIM_Prescaler = 2 * prescaler_value;
+    uint16_t period_value = (uint16_t) (36000000 / 65535 / 1);
+    TIM_TimeBaseStructure.TIM_Period = 2 * period_value;
+    TIM_TimeBaseStructure.TIM_Prescaler = 65535;
     TIM_TimeBaseStructure.TIM_ClockDivision = 0;
     TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
     TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
